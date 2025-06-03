@@ -135,6 +135,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+agn-env/
 
 # Spyder project settings
 .spyderproject
@@ -192,3 +193,23 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+.cursor/*
+
+# macOS
+*.DS_Store
+
+# Project-specific ignores
+data/fits_images/
+data/processed_images/
+data/ml_ready_data/
+data/final_galaxy_targets.csv
+output/
+
+# Ignore specific files if they are ever generated in root and should not be
+# training_history.png # Example if it sometimes lands in root
+# output.md # Example if it sometimes lands in root
+
+docs/projectroadmap.md
+data/galSpecExtra-dr8.fits
+data/galSpecInfo-dr8.fits
