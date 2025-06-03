@@ -133,7 +133,7 @@ Our universe is filled with billions of galaxies, each packed with an abundance 
 
 Typically, these SMBHs remain dormant, just like the one in our own Milky Way - Sagittarius A* (Sgr A*). However, sometimes, they wake up. When gas and dust from the host galaxy fall towards the SMBH, it doesn't just go straight into it. Instead, it forms a swirling, superheated disk of material, heating up to millions of degrrees, creating a bright, energetic region called an accretion disk. This disk is so hot that it emits intense radiation across the electromagnetic spectrum, from visible light to X-rays. So bright, in fact, that it can outshine the entire galaxy around it. When this happens, we say that this galaxy hosts an Active Galactic Nucleus (AGN).
 
-![Image of a black hole.](agn%20writeup%202074d46098bf80cc9442c8b8fdf0250a/image.png)
+![Image of a black hole.](attachment:521a49bb-3cca-4be7-b68d-b1da587599c2:image.png)
 
 Image of a black hole.
 
@@ -539,7 +539,7 @@ history = agn_cnn_model.fit(
 
 During training, Keras displays the progress for each of the 15 epochs. We can capture the training history (loss and accuracy for both training and validation sets) and plot it.
 
-![*Learning curves for the initial simple CNN model trained for 15 epochs without data augmentation. The left plot shows Model Accuracy, and the right plot shows Model Loss. The blue lines represent training metrics, and orange lines represent validation metrics.*](agn%20writeup%202074d46098bf80cc9442c8b8fdf0250a/Pasted_Graphic_1.png)
+![*Learning curves for the initial simple CNN model trained for 15 epochs without data augmentation. The left plot shows Model Accuracy, and the right plot shows Model Loss. The blue lines represent training metrics, and orange lines represent validation metrics.*](attachment:4e20fe0c-e03a-459c-99c0-a701d0a0058e:Pasted_Graphic_1.png)
 
 *Learning curves for the initial simple CNN model trained for 15 epochs without data augmentation. The left plot shows Model Accuracy, and the right plot shows Model Loss. The blue lines represent training metrics, and orange lines represent validation metrics.*
 
@@ -632,12 +632,6 @@ EPOCHS = 25
 # ... model.fit() call with these new parameters ...
 
 ```
-
-The impact of data augmentation was immediately visible in the new learning curves.
-
-![*Learning curves for the simple CNN model trained for 25 epochs with data augmentation. The left plot shows Model Accuracy, and the right plot shows Model Loss. Training metrics are in blue, validation metrics in orange.*](agn%20writeup%202074d46098bf80cc9442c8b8fdf0250a/Pasted_Graphic.png)
-
-*Learning curves for the simple CNN model trained for 25 epochs with data augmentation. The left plot shows Model Accuracy, and the right plot shows Model Loss. Training metrics are in blue, validation metrics in orange.*
 
 The new learning curves showed a huge improvement in training behaviour. The **training accuracy** (blue) now hovered around 86%, while the **validation accuracy** (orange) tracked it much more closely, generally staying in the 78-84% range without a significant sustained drop. Most importantly, the **validation loss** (orange) no longer "exploded." It decreased and then stabilised around 0.35-0.45, staying much closer to the **training loss** (blue), which settled around 0.3-0.35. This indicated that overfitting had been significantly mitigated.
 
@@ -878,7 +872,7 @@ history = agn_cnn_model.fit(
 
 The ResNet-18 model, with its approximately 11.2 million trainable parameters, then undergoes training. After 25 epochs, we can plot the training history (saved as `output/training_history_resnet18.png`) and evaluate its performance on the unseen validation set using the evaluation functions within `scripts/train_cnn.py`.
 
-![*Learning curves for the ResNet-18 model trained for 25 epochs with data augmentation. The left plot (Model Accuracy) shows training accuracy (blue) steadily climbing from ~75% to ~85%. Validation accuracy (orange) is more erratic, starting near 50%, showing peaks up to ~83% and ending around ~83%. The right plot (Model Loss) shows training loss (blue) decreasing from ~0.6 to ~0.33. Validation loss (orange) starts very high (~1.9), drops sharply to ~0.6, then fluctuates between ~0.4 and ~0.8, generally staying near or below 0.4 for the latter half, ending at 0.3863.*](agn%20writeup%202074d46098bf80cc9442c8b8fdf0250a/Pasted_Graphic%201.png)
+![*Learning curves for the ResNet-18 model trained for 25 epochs with data augmentation. The left plot (Model Accuracy) shows training accuracy (blue) steadily climbing from ~75% to ~85%. Validation accuracy (orange) is more erratic, starting near 50%, showing peaks up to ~83% and ending around ~83%. The right plot (Model Loss) shows training loss (blue) decreasing from ~0.6 to ~0.33. Validation loss (orange) starts very high (~1.9), drops sharply to ~0.6, then fluctuates between ~0.4 and ~0.8, generally staying near or below 0.4 for the latter half, ending at 0.3863.*](attachment:7b2d6bc6-3d55-4dd4-8ff1-4116b8ee4a31:Pasted_Graphic.png)
 
 *Learning curves for the ResNet-18 model trained for 25 epochs with data augmentation. The left plot (Model Accuracy) shows training accuracy (blue) steadily climbing from ~75% to ~85%. Validation accuracy (orange) is more erratic, starting near 50%, showing peaks up to ~83% and ending around ~83%. The right plot (Model Loss) shows training loss (blue) decreasing from ~0.6 to ~0.33. Validation loss (orange) starts very high (~1.9), drops sharply to ~0.6, then fluctuates between ~0.4 and ~0.8, generally staying near or below 0.4 for the latter half, ending at 0.3863.*
 
